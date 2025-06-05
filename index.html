@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our CEO – Fun Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .question {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .question h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .options label {
+      display: block;
+      margin: 0.5rem 0;
+      cursor: pointer;
+    }
+    .answer {
+      margin-top: 1rem;
+      background-color: #e9f8f2;
+      border-left: 5px solid #2ecc71;
+      padding: 1rem;
+      display: none;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my GitHub Page.</p>
+  <div class="container">
+    <h1>Getting to Know the CEO – Fun & Personal Quiz!</h1>
+    <p style="text-align:center">Let’s see how well you know our CEO! (No pressure… just fun 😄)</p>
+
+    <div class="question">
+      <h2>1. If she weren’t leading a company, what career would she most likely be pursuing?</h2>
+      <div class="options">
+        <label><input type="radio" name="q1"> A. Hosting a science show for kids on TV 📺</label>
+        <label><input type="radio" name="q1"> B. Teaching imaginary students in her own pretend classroom 👩‍🏫</label>
+        <label><input type="radio" name="q1"> C. Managing a vineyard and teaching wine-tasting 🍷</label>
+        <label><input type="radio" name="q1"> D. Traveling full-time to explore museums and ancient ruins 🏛️</label>
+      </div>
+      <button onclick="document.getElementById('a1').style.display='block'">Show Answer</button>
+      <div id="a1" class="answer">
+        🟢 <strong>Correct Answer:</strong><br>
+        As far back as I can remember I always had a passion for teaching and sharing knowledge. When I was a child I created my own classroom and had imaginary learners who I prepared lessons for, and taught for hours. My parents always thought I’d become a teacher — but I also loved science and discovering new things, so I followed that path instead.
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>2. What’s one exciting adventure on her bucket list?</h2>
+      <div class="options">
+        <label><input type="radio" name="q2"> A. Paragliding over the Swiss Alps 🪂</label>
+        <label><input type="radio" name="q2"> B. Running the New York Marathon 🏃‍♀️</label>
+        <label><input type="radio" name="q2"> C. Hiking the El Camino Trail in Spain with her husband 🥾</label>
+        <label><input type="radio" name="q2"> D. Swimming with sharks in South Africa 🦈</label>
+      </div>
+      <button onclick="document.getElementById('a2').style.display='block'">Show Answer</button>
+      <div id="a2" class="answer">
+        🟢 <strong>Correct Answer:</strong><br>
+        My husband and I would love to hike the El Camino Trail in Spain. We're planning to do this in about 3 years’ time as it involves quite a lot of planning, and we’ll need to be very fit. There are various distances to choose from — some routes go through France and Portugal, with the longest being around 1000 kilometres.
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>3. What hidden talent does she secretly enjoy?</h2>
+      <div class="options">
+        <label><input type="radio" name="q3"> A. Singing along to 90s pop songs in the car 🎤</label>
+        <label><input type="radio" name="q3"> B. Dancing 💃</label>
+        <label><input type="radio" name="q3"> C. Baking cakes with surprise ingredients 🎂</label>
+        <label><input type="radio" name="q3"> D. Solving puzzles in record time 🧩</label>
+      </div>
+      <button onclick="document.getElementById('a3').style.display='block'">Show Answer</button>
+      <div id="a3" class="answer">
+        🟢 <strong>Correct Answer:</strong><br>
+        Definitely not a talent, but I love to dance (preferably when no-one is watching).
+      </div>
+    </div>
+  </div>
 </body>
 </html>
