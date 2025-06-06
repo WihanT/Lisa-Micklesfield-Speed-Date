@@ -7,8 +7,8 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #7091E6;
+	font-family: Garamond,serif;
+      background-color: #2C3531;
       color: #333;
       margin: 0;
       padding: 0;
@@ -24,13 +24,14 @@
       text-align: center;
       color: white;
       animation: fadeIn 1s ease-in-out;
+	  bold:true; 
     }
 	
     .bio {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: #ADBBDA;
+      background: #116466;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -57,7 +58,7 @@
       color: white;
     }
     .question {
-      background: #EDE8F5;
+      background: #D1E8E2;
       border-radius: 12px;
       padding: 1.5rem;
       margin-bottom: 2rem;
@@ -79,7 +80,7 @@
 	}
 	
 	  .time-container {
-      background: #ADBBDA;
+      background: #D1E8E2;
       border-radius: 12px;
       padding: 1.5rem;
       margin-bottom: 2rem;
@@ -88,7 +89,14 @@
 	  opacity: 0;
 	  transform: translateY(40px);
 	  transition: all 0.6s ease-out;
+      text-align: center;
+      flex-direction: column;
     }
+	
+	.time-container p1{
+	  color:black;
+      font-size: 1.2rem;	  
+	}
 	
 	.time-container.visible {
 	  opacity: 1;
@@ -168,7 +176,7 @@
 }
 
  .time-box {
-  background: #8697C4;
+  background: #D9B08C;
   padding: 10px 2px;
   border-radius: 12px;
   text-align: center;
@@ -190,27 +198,27 @@
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #ADBBDA;
+    color: white;
   }
 	
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>A Warm Welcome to Our New Director</h1>
+    <h1>GETTING TO KNOW THE NEW BOSS LADY!</h1>
     <div class="bio blur">
       <div class="bio-text">
         <h2>Professor Lisa K. Micklesfield</h2>
 		<img src="thumbnail_image001.png" alt="Professor Lisa Micklesfield">
-        <p>Professor Lisa K. Micklesfield is a distinguished South African academic specializing in physical activity epidemiology, body composition, and metabolic health. She serves as a full professor at the University of the Witwatersrand (Wits) in Johannesburg and holds the position of Deputy Director at the South African Medical Research Council (SAMRC)/Wits Developmental Pathways for Health Research Unit (DPHRU).</p>
+        <p style="color:white;">Professor Lisa K. Micklesfield is a distinguished South African academic specializing in physical activity epidemiology, body composition, and metabolic health. She serves as a full professor at the University of the Witwatersrand (Wits) in Johannesburg and holds the position of Deputy Director at the South African Medical Research Council (SAMRC)/Wits Developmental Pathways for Health Research Unit (DPHRU).</p>
 	  </div>
     </div>
 
 <div class="time-container">
- <h1>When can we meet?</h1>
-	  <h1>2025-12-31 at 23:59:59</h1>
-	  <h1>DPHRU</h1>
-	  <h1></h1>
+ <p1>Are you up for a date?&#x2665;&#xfe0f;<br></p1>
+	  <p1>2025-06-26<br></p1>
+	  <p1>14:30:00 - 16:30:00<br></pa>
+	  <p1>DPHRU Boardroom</p1>
 	  <div class="countdown">
 		  <div class="time-box">
 			<span id="days">0</span>
@@ -232,49 +240,162 @@
 </div>
 
 
-   <p style="text-align:center; color:white;">Let’s see how well you know our CEO! (No pressure… just fun 😄)</p>
+   <h1 style="text-align:center; color:white;">Let’s see how well you know ! <br>(No pressure… just fun 😄)</h1>
+<div class="question">
+    <h2>1. If you weren’t leading a company right now, what kind of work or passion would you be pursuing instead?</h2>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A" onclick="showAnswer('a1')"> A. ✈️ Starting a travel vlog and exploring hidden food spots around the world</label>
+      <label><input type="radio" name="q1" value="B" onclick="showAnswer('a1')"> B. 👩‍🏫 Teaching and sharing knowledge – complete with imaginary learners as a child</label>
+      <label><input type="radio" name="q1" value="C" onclick="showAnswer('a1')"> C. 🏋️‍♀️ Becoming a professional athlete or coach</label>
+    </div>
+    <div id="a1" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      AS FAR BACK AS I CAN REMEMBER I ALWAYS HAD A PASSION FOR TEACHING AND SHARING KNOWLEDGE. WHEN I WAS A CHILD I CREATED MY OWN CLASSROOM AND HAD IMAGINARY LEARNERS WHO I PREPARED LESSONS FOR, AND TAUGHT FOR HOURS. MY PARENTS ALWAYS THOUGHT I WOULD BECOME A TEACHER BUT I ALSO LOVED SCIENCE AND DISCOVERING NEW THINGS SO I FOLLOWED THAT PATH INSTEAD.
+    </div>
+  </div>
 
-    <form id="quizForm">
-      <div class="question">
-        <h2>1. If she weren’t leading a company, what career would she most likely be pursuing?</h2>
-        <div class="options">
-          <label><input type="radio" name="q1" value="A" onclick="showAnswer('a1')"> A. Hosting a science show for kids on TV 📺</label>
-          <label><input type="radio" name="q1" value="B" onclick="showAnswer('a1')"> B. Teaching imaginary students in her own pretend classroom 👩‍🏫</label>
-          <label><input type="radio" name="q1" value="C" onclick="showAnswer('a1')"> C. Managing a vineyard and teaching wine-tasting 🍷</label>
-          <label><input type="radio" name="q1" value="D" onclick="showAnswer('a1')"> D. Traveling full-time to explore museums and ancient ruins 🏛️</label>
-        </div>
-        <div id="a1" class="answer">
-          🟢 <strong>Correct Answer:</strong><br>
-          As far back as I can remember I always had a passion for teaching and sharing knowledge...
-        </div>
-      </div>
+  <div class="question">
+    <h2>2. Is there something exciting or daring on your bucket list that you haven’t gotten to yet?</h2>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A" onclick="showAnswer('a2')"> A. 🪂 Skydiving over the Alps</label>
+      <label><input type="radio" name="q2" value="B" onclick="showAnswer('a2')"> B. 🥾 Hiking the El Camino Trail in Spain️</label>
+      <label><input type="radio" name="q2" value="C" onclick="showAnswer('a2')"> C. 🦈 Swimming with sharks in South Africa</label>
+    </div>
+    <div id="a2" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      MY HUSBAND AND I WOULD LOVE TO HIKE THE EL CAMINO TRAIL IN SPAIN. WE ARE PLANNING TO DO THIS IN ABOUT 3 YEARS TIME AS IT INVOLVES QUITE A LOT OF PLANNING AND WE ARE GOING TO HAVE TO BE VERY FIT. THERE ARE VARIOUS DISTANCES THAT WE CAN CHOOSE, SOME OF WHICH GO THROUGH FRANCE AND PORTUGAL, WITH THE LONGEST BEING APPROXIMATELY 1000 KILOMETRES.
+    </div>
+  </div>
 
-      <div class="question">
-        <h2>2. What’s one exciting adventure on her bucket list?</h2>
-        <div class="options">
-          <label><input type="radio" name="q2" value="A" onclick="showAnswer('a2')"> A. Paragliding over the Swiss Alps 🪂</label>
-          <label><input type="radio" name="q2" value="B" onclick="showAnswer('a2')"> B. Running the New York Marathon 🏃‍♀️</label>
-          <label><input type="radio" name="q2" value="C" onclick="showAnswer('a2')"> C. Hiking the El Camino Trail in Spain with her husband 🥾</label>
-          <label><input type="radio" name="q2" value="D" onclick="showAnswer('a2')"> D. Swimming with sharks in South Africa 🦈</label>
-        </div>
-        <div id="a2" class="answer">
-          🟢 <strong>Correct Answer:</strong><br>
-          My husband and I would love to hike the El Camino Trail in Spain...
-        </div>
-      </div>
+  <div class="question">
+    <h2>3. Do you have any hidden talents or skills most people don’t know about?</h2>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A" onclick="showAnswer('a3')"> A. 🎩 Mastering magic tricks</label>
+      <label><input type="radio" name="q3" value="B" onclick="showAnswer('a3')"> B. 🎹 Playing classical piano</label>
+      <label><input type="radio" name="q3" value="C" onclick="showAnswer('a3')"> C. 💃 Dancing when no one is watching</label>
+    </div>
+    <div id="a3" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      DEFINITELY NOT A TALENT BUT I LOVE TO DANCE (PREFERABLY WHEN NO-ONE IS WATCHING).
+    </div>
+  </div>
 
-      <div class="question">
-        <h2>3. What hidden talent does she secretly enjoy?</h2>
-        <div class="options">
-          <label><input type="radio" name="q3" value="A" onclick="showAnswer('a3')"> A. Singing along to 90s pop songs in the car 🎤</label>
-          <label><input type="radio" name="q3" value="B" onclick="showAnswer('a3')"> B. Dancing 💃</label>
-          <label><input type="radio" name="q3" value="C" onclick="showAnswer('a3')"> C. Baking cakes with surprise ingredients 🎂</label>
-          <label><input type="radio" name="q3" value="D" onclick="showAnswer('a3')"> D. Solving puzzles in record time 🧩</label>
-        </div>
-        <div id="a3" class="answer">
-          🟢 <strong>Correct Answer:</strong><br>
-          Definitely not a talent, but I love to dance (preferably when no-one is watching).
-        </div>
+  <div class="question">
+    <h2>4. After a long day, what’s your favourite way to relax and recharge?</h2>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A" onclick="showAnswer('a4')"> A. 🛁 Long bubble bath with music</label>
+      <label><input type="radio" name="q4" value="B" onclick="showAnswer('a4')"> B. 🍷 Glass of wine while hubby cooks dinner</label>
+      <label><input type="radio" name="q4" value="C" onclick="showAnswer('a4')"> C. 📺 Binge-watching a favourite series</label>
+    </div>
+    <div id="a4" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      HAVING A GLASS OF WINE WHILE MY HUSBAND COOKS DINNER.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>5. Where do you hope to see this unit five years from now, and what part of that vision excites you the most?</h2>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A" onclick="showAnswer('a5')"> A. 🚀 Rapid expansion into global markets and launching five new divisions</label>
+      <label><input type="radio" name="q5" value="B" onclick="showAnswer('a5')"> B. 🎯 Staying successful, achieving objectives, and creating career growth opportunities</label>
+      <label><input type="radio" name="q5" value="C" onclick="showAnswer('a5')"> C. 🤖 Becoming fully automated with AI managing all day-to-day operations</label>
+    </div>
+    <div id="a5" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      I HOPE TO SEE THE UNIT BEING AS SUCCESSFUL AS IT IS NOW. I AM EXCITED TO SEE US ACHIEVE OUR OBJECTIVES, AND MOST IMPORTANTLY ALONG THE WAY I HOPE THAT WE CAN CREATE MANY MORE OPPORTUNITIES FOR PEOPLE TO GROW IN THEIR CAREERS, AND THAT WE CONTINUE TO MAKE A DIFFERENCE IN THE COMMUNITY.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>6. What’s the most surprising or unusual job you’ve ever done, even if it was just for a short time?</h2>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A" onclick="showAnswer('a6')"> A. 🎭 Street performer at a local arts festival</label>
+      <label><input type="radio" name="q6" value="B" onclick="showAnswer('a6')"> B. 🏫 Hostel “mom” – waking kids, coaching sport, and managing homework</label>
+      <label><input type="radio" name="q6" value="C" onclick="showAnswer('a6')"> C. 🍦 Ice cream truck assistant during summer break</label>
+    </div>
+    <div id="a6" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      WHEN I WAS STUDYING IN MAKHANDA I LIVED AND WORKED AT A SCHOOL SO THAT THE COSTS OF MY BOARD AND LODGING WERE COVERED. I LIVED IN THE HOSTEL SO I WAS RESPONSIBLE FOR ENSURING THAT ALL THE GIRLS (BETWEEN 6 AND 12 YEARS) WOKE UP ON TIME, HAD THEIR BREAKFAST AND THEN WENT TO SCHOOL. IN THE AFTERNOONS AND EVENINGS I HAD TO COACH SPORT AND MAKE SURE THEY DID THEIR HOMEWORK AND ATE THEIR DINNER BEFORE GOING TO BED.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>7. What personal value or belief do you consistently bring into your work and leadership?</h2>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A" onclick="showAnswer('a7')"> A. 🧠 Innovation and risk-taking</label>
+      <label><input type="radio" name="q7" value="B" onclick="showAnswer('a7')"> B. 🤝 Integrity, consistency, and living with no regrets</label>
+      <label><input type="radio" name="q7" value="C" onclick="showAnswer('a7')"> C. 🏆 Ambition and competition above all</label>
+    </div>
+    <div id="a7" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      INTEGRITY AND CONSISTENCY ARE VERY IMPORTANT TO ME, AND MOST IMPORTANTLY, DON’T HAVE REGRETS.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>8. Is there a lesson, quote, or guiding principle that has shaped the way you lead others?</h2>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A" onclick="showAnswer('a8')"> A. 🗣 “Speak so others will listen, and listen so others will speak.”</label>
+      <label><input type="radio" name="q8" value="B" onclick="showAnswer('a8')"> B. 🧘 “Slow is smooth, and smooth is fast.”</label>
+      <label><input type="radio" name="q8" value="C" onclick="showAnswer('a8')"> C. ❤️ “Treat others as you would like to be treated.”</label>
+    </div>
+    <div id="a8" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      TREAT OTHERS AS YOU WOULD LIKE TO BE TREATED.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>9. What qualities do you appreciate most in the people you work with and why?</h2>
+    <div class="options">
+      <label><input type="radio" name="q9" value="A" onclick="showAnswer('a9')"> A. 😎 A good sense of humour and love for coffee breaks</label>
+      <label><input type="radio" name="q9" value="B" onclick="showAnswer('a9')"> B. 💡 A commitment to their work and a solution-focused mindset</label>
+      <label><input type="radio" name="q9" value="C" onclick="showAnswer('a9')"> C. 📈 An obsession with being the best at everything</label>
+    </div>
+    <div id="a9" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      A COMMITMENT TO THEIR WORK AND MAKING A DIFFERENCE. I REALLY APPRECIATE PEOPLE WHO LOOK FOR SOLUTIONS RATHER THAN PROBLEMS.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>10. What are two behaviours or attitudes that you find difficult to work with in a team setting?</h2>
+    <div class="options">
+      <label><input type="radio" name="q10" value="A" onclick="showAnswer('a10')"> A. 🐌 Being too slow and quiet in meetings</label>
+      <label><input type="radio" name="q10" value="B" onclick="showAnswer('a10')"> B. 😤 Constant complaining and lack of accountability</label>
+      <label><input type="radio" name="q10" value="C" onclick="showAnswer('a10')"> C. 🤓 Being overly detail-obsessed</label>
+    </div>
+    <div id="a10" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      PEOPLE WHO COMPLAIN ALL THE TIME AND DON’T LOOK FOR SOLUTIONS, AND DON’T TAKE PRIDE OR RESPONSIBILITY IN THEIR WORK.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>11. What’s something someone can do that immediately earns your trust?</h2>
+    <div class="options">
+      <label><input type="radio" name="q11" value="A" onclick="showAnswer('a11')"> A. 🕵️ Sharing secrets or personal stories</label>
+      <label><input type="radio" name="q11" value="B" onclick="showAnswer('a11')"> B. 💬 Giving lots of compliments</label>
+      <label><input type="radio" name="q11" value="C" onclick="showAnswer('a11')"> C. ✅ Doing what they say they’re going to do</label>
+    </div>
+    <div id="a11" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      IF SOMEONE DOES WHAT THEY SAY THEY ARE GOING TO DO.
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>12. How does your family influence or support the way you lead?</h2>
+    <div class="options">
+      <label><input type="radio" name="q12" value="A" onclick="showAnswer('a12')"> A. 👨‍👩‍👧‍👦 They remind me to take breaks and enjoy the small things</label>
+      <label><input type="radio" name="q12" value="B" onclick="showAnswer('a12')"> B. 🌟 They inspire me to be a role model, especially for my daughters</label>
+      <label><input type="radio" name="q12" value="C" onclick="showAnswer('a12')"> C. 📚 They help me stay organised with calendars and reminders</label>
+    </div>
+    <div id="a12" class="answer">
+      🟢 <strong>Correct Answer:</strong><br>
+      MY FAMILY IS THE MOST IMPORTANT THING TO ME. AS I HAVE TWO DAUGHTERS IT IS IMPORTANT THAT I AM A ROLE MODEL FOR THEM, AND AS THEY BECOME ADULTS THEY KNOW WHAT THEY WANT AND THAT THEY WORK HARD TO ACHIEVE IT (AND HAVE NO REGRETS).
+    </div>
+  </div>
       </div>
     </form>
 
@@ -289,7 +410,7 @@
     }
 
     function checkIfAllAnswered() {
-      const totalQuestions = 3;
+      const totalQuestions = 12;
       let answeredCount = 0;
 
       for (let i = 1; i <= totalQuestions; i++) {
@@ -310,7 +431,20 @@
     }
 
     function calculateScore() {
-      const answers = { q1: "B", q2: "C", q3: "B" };
+      const answers = {
+      q1: "B",
+      q2: "B",
+      q3: "C",
+      q4: "B",
+      q5: "B",
+      q6: "B",
+      q7: "B",
+      q8: "C",
+      q9: "B",
+      q10: "B",
+      q11: "C",
+      q12: "B"
+    };
   let score = 0;
   for (let key in answers) {
     const selected = document.querySelector(`input[name="${key}"]:checked`);
@@ -321,7 +455,7 @@
 
   const scoreEl = document.getElementById('score');
   scoreEl.style.display = 'block';
-  scoreEl.innerText = `You scored ${score} out of 3! 🎉`;
+  scoreEl.innerText = `You scored ${score} out of 12! 🎉`;
 
   // 👇 Scroll to the score element smoothly
   scoreEl.scrollIntoView({ behavior: 'smooth' });
@@ -342,8 +476,7 @@
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');
   const secondsEl = document.getElementById('seconds');
-
-  const targetDate = new Date("2025-12-31T23:59:59").getTime();
+  const targetDate = new Date("2025-06-26T14:30:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
