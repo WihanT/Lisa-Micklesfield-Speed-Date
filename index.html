@@ -200,12 +200,38 @@
     letter-spacing: 1.5px;
     color: white;
   }
-	
+	.event-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  background-color: #FFCB9A;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);  
+  max-width: 900px;
+}
+
+.event-table th, .event-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.event-table th {
+  background-color: #116466;
+  color: white;
+  width: 30%;
+}
+
+.event-table tr:last-child td {
+  border-bottom: none;
+}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>GETTING TO KNOW THE NEW BOSS LADY!</h1>
+    <h1>GETTING TO KNOW THE NEW LADY AT TOP!</h1>
     <div class="bio blur">
       <div class="bio-text">
         <h2>Professor Lisa K. Micklesfield</h2>
@@ -399,10 +425,72 @@
       </div>
 	  
    <h1 style="text-align:center; color:white;">Please keep your score for the speed date!</h1>
+	  <table border="1" cellpadding="5" cellspacing="0" class="event-table" align="center">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Team / Project</th>
+      <th>PC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2:00–2:15</td>
+      <td>GenHeart</td>
+      <td>Delisile Kubheka</td>
+    </tr>
+    <tr>
+      <td>2:15–2:30</td>
+      <td>Bt40</td>
+      <td>Thabisile Tsotetsi</td>
+    </tr>
+    <tr>
+      <td>2:30–2:45</td>
+      <td>MASC</td>
+      <td>Sandisiwe Nkosi</td>
+    </tr>
+    <tr>
+      <td>2:45–3:00</td>
+      <td>HeLTI PE</td>
+      <td>Nosibusiso Tshetu</td>
+    </tr>
+    <tr>
+      <td>3:00–3:15</td>
+      <td>Ntshembo Inter</td>
+      <td>Nomses Mkansi</td>
+    </tr>
+    <tr>
+      <td>3:15–3:30</td>
+      <td>Ntshembo Contr</td>
+      <td>Corlett Ndlovu</td>
+    </tr>
+    <tr>
+      <td>3:30–3:45</td>
+      <td>Ntshembo Inter</td>
+      <td>Yolisa Ngqele</td>
+    </tr>
+    <tr>
+      <td>3:45–4:00</td>
+      <td>LifeLab</td>
+      <td>Martha Ngobeni</td>
+    </tr>
+    <tr>
+      <td>4:00–4:15</td>
+      <td>Mindfood Space</td>
+      <td>Jackson Mabaso</td>
+    </tr>
+    <tr>
+      <td>4:15–4:30</td>
+      <td>Ntshembo PE</td>
+      <td>Thenjiwe Dubazane</td>
+    </tr>
+  </tbody>
+</table>
+	 
     </form>
 	
 
-    <div id="score" class="score" style="display:none"></div>
+    <div id="score" class="score" style="display:none; font-size:" ></div>
   </div>
 
  <script>
