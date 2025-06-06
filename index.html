@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meet Our CEO – Fun Quiz</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f9;
+      background-color: #7091E6;
       color: #333;
       margin: 0;
       padding: 0;
+      transition: background-color 0.3s ease;
     }
     .container {
       max-width: 900px;
@@ -19,14 +21,41 @@
     }
     h1 {
       text-align: center;
+      color: white;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .bio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ADBBDA;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      animation: slideUp 1s;
+    }
+    .bio img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .bio-text {
+      text-align: center;
+    }
+    .bio-text h2 {
+      margin-top: 0;
       color: #2c3e50;
     }
     .question {
-      background: #fff;
+      background: #EDE8F5;
       border-radius: 12px;
       padding: 1.5rem;
       margin-bottom: 2rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      animation: fadeIn 1s ease-in-out;
     }
     .question h2 {
       font-size: 1.2rem;
@@ -43,6 +72,7 @@
       border-left: 5px solid #2ecc71;
       padding: 1rem;
       display: none;
+      animation: fadeIn 0.5s ease-in;
     }
     button {
       margin-top: 1rem;
@@ -56,57 +86,152 @@
     button:hover {
       background-color: #2980b9;
     }
+    .score {
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: #dff0d8;
+      border: 1px solid #b2d8b2;
+      color: #3c763d;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @media (min-width: 768px) {
+      .bio {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .bio img {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+      }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0.5; -webkit-filter: blur(1px);}
+      to { transform: translateY(0); opacity: 1; -webkit-filter: blur(0px);}
+    }
+	
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Getting to Know the CEO – Fun & Personal Quiz!</h1>
-    <p style="text-align:center">Let’s see how well you know our CEO! (No pressure… just fun 😄)</p>
-
-    <div class="question">
-      <h2>1. If she weren’t leading a company, what career would she most likely be pursuing?</h2>
-      <div class="options">
-        <label><input type="radio" name="q1"> A. Hosting a science show for kids on TV 📺</label>
-        <label><input type="radio" name="q1"> B. Teaching imaginary students in her own pretend classroom 👩‍🏫</label>
-        <label><input type="radio" name="q1"> C. Managing a vineyard and teaching wine-tasting 🍷</label>
-        <label><input type="radio" name="q1"> D. Traveling full-time to explore museums and ancient ruins 🏛️</label>
-      </div>
-      <button onclick="document.getElementById('a1').style.display='block'">Show Answer</button>
-      <div id="a1" class="answer">
-        🟢 <strong>Correct Answer:</strong><br>
-        As far back as I can remember I always had a passion for teaching and sharing knowledge. When I was a child I created my own classroom and had imaginary learners who I prepared lessons for, and taught for hours. My parents always thought I’d become a teacher — but I also loved science and discovering new things, so I followed that path instead.
+    <h1>A Warm Welcome to Our New Director</h1>
+    <div class="bio blur">
+      <div class="bio-text">
+        <h2>Professor Lisa K. Micklesfield</h2>
+		<img src="https://loop.frontiersin.org/images/profile/1064445/203" alt="Professor Lisa Micklesfield">
+        <p>Professor Lisa K. Micklesfield is a distinguished South African academic specializing in physical activity epidemiology, body composition, and metabolic health. She serves as a full professor at the University of the Witwatersrand (Wits) in Johannesburg and holds the position of Deputy Director at the South African Medical Research Council (SAMRC)/Wits Developmental Pathways for Health Research Unit (DPHRU).</p>
       </div>
     </div>
 
-    <div class="question">
-      <h2>2. What’s one exciting adventure on her bucket list?</h2>
-      <div class="options">
-        <label><input type="radio" name="q2"> A. Paragliding over the Swiss Alps 🪂</label>
-        <label><input type="radio" name="q2"> B. Running the New York Marathon 🏃‍♀️</label>
-        <label><input type="radio" name="q2"> C. Hiking the El Camino Trail in Spain with her husband 🥾</label>
-        <label><input type="radio" name="q2"> D. Swimming with sharks in South Africa 🦈</label>
-      </div>
-      <button onclick="document.getElementById('a2').style.display='block'">Show Answer</button>
-      <div id="a2" class="answer">
-        🟢 <strong>Correct Answer:</strong><br>
-        My husband and I would love to hike the El Camino Trail in Spain. We're planning to do this in about 3 years’ time as it involves quite a lot of planning, and we’ll need to be very fit. There are various distances to choose from — some routes go through France and Portugal, with the longest being around 1000 kilometres.
-      </div>
-    </div>
+   <p style="text-align:center; color:white;">Let’s see how well you know our CEO! (No pressure… just fun 😄)</p>
 
-    <div class="question">
-      <h2>3. What hidden talent does she secretly enjoy?</h2>
-      <div class="options">
-        <label><input type="radio" name="q3"> A. Singing along to 90s pop songs in the car 🎤</label>
-        <label><input type="radio" name="q3"> B. Dancing 💃</label>
-        <label><input type="radio" name="q3"> C. Baking cakes with surprise ingredients 🎂</label>
-        <label><input type="radio" name="q3"> D. Solving puzzles in record time 🧩</label>
+    <form id="quizForm">
+      <div class="question">
+        <h2>1. If she weren’t leading a company, what career would she most likely be pursuing?</h2>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A" onclick="showAnswer('a1')"> A. Hosting a science show for kids on TV 📺</label>
+          <label><input type="radio" name="q1" value="B" onclick="showAnswer('a1')"> B. Teaching imaginary students in her own pretend classroom 👩‍🏫</label>
+          <label><input type="radio" name="q1" value="C" onclick="showAnswer('a1')"> C. Managing a vineyard and teaching wine-tasting 🍷</label>
+          <label><input type="radio" name="q1" value="D" onclick="showAnswer('a1')"> D. Traveling full-time to explore museums and ancient ruins 🏛️</label>
+        </div>
+        <div id="a1" class="answer">
+          🟢 <strong>Correct Answer:</strong><br>
+          As far back as I can remember I always had a passion for teaching and sharing knowledge...
+        </div>
       </div>
-      <button onclick="document.getElementById('a3').style.display='block'">Show Answer</button>
-      <div id="a3" class="answer">
-        🟢 <strong>Correct Answer:</strong><br>
-        Definitely not a talent, but I love to dance (preferably when no-one is watching).
+
+      <div class="question">
+        <h2>2. What’s one exciting adventure on her bucket list?</h2>
+        <div class="options">
+          <label><input type="radio" name="q2" value="A" onclick="showAnswer('a2')"> A. Paragliding over the Swiss Alps 🪂</label>
+          <label><input type="radio" name="q2" value="B" onclick="showAnswer('a2')"> B. Running the New York Marathon 🏃‍♀️</label>
+          <label><input type="radio" name="q2" value="C" onclick="showAnswer('a2')"> C. Hiking the El Camino Trail in Spain with her husband 🥾</label>
+          <label><input type="radio" name="q2" value="D" onclick="showAnswer('a2')"> D. Swimming with sharks in South Africa 🦈</label>
+        </div>
+        <div id="a2" class="answer">
+          🟢 <strong>Correct Answer:</strong><br>
+          My husband and I would love to hike the El Camino Trail in Spain...
+        </div>
       </div>
-    </div>
+
+      <div class="question">
+        <h2>3. What hidden talent does she secretly enjoy?</h2>
+        <div class="options">
+          <label><input type="radio" name="q3" value="A" onclick="showAnswer('a3')"> A. Singing along to 90s pop songs in the car 🎤</label>
+          <label><input type="radio" name="q3" value="B" onclick="showAnswer('a3')"> B. Dancing 💃</label>
+          <label><input type="radio" name="q3" value="C" onclick="showAnswer('a3')"> C. Baking cakes with surprise ingredients 🎂</label>
+          <label><input type="radio" name="q3" value="D" onclick="showAnswer('a3')"> D. Solving puzzles in record time 🧩</label>
+        </div>
+        <div id="a3" class="answer">
+          🟢 <strong>Correct Answer:</strong><br>
+          Definitely not a talent, but I love to dance (preferably when no-one is watching).
+        </div>
+      </div>
+    </form>
+
+    <div id="score" class="score" style="display:none"></div>
   </div>
+
+ <script>
+    function showAnswer(id) {
+      document.getElementById(id).style.display = 'block';
+      checkIfAllAnswered();
+    }
+
+    function checkIfAllAnswered() {
+      const totalQuestions = 3;
+      let answeredCount = 0;
+
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (document.querySelector(`input[name="q${i}"]:checked`)) {
+          answeredCount++;
+        }
+      }
+
+      if (answeredCount === totalQuestions) {
+	  
+        calculateScore();
+		confetti({
+		particleCount: 300,
+		spread: 300,
+		origin: { y: 0.5 }
+	  });
+      }
+    }
+
+    function calculateScore() {
+      const answers = { q1: "B", q2: "C", q3: "B" };
+      let score = 0;
+      for (let key in answers) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) {
+          score++;
+        }
+      }
+      document.getElementById('score').style.display = 'block';
+      document.getElementById('score').innerText = `You scored ${score} out of 3! 🎉`;
+    }
+	
+	function celebrate() {
+      confetti({
+        particleCount: 900,
+        spread: 300,
+        origin: { y: 0.4 }
+      });
+	  
+    }
+	
+	  window.onload = () => {
+	  confetti({
+		particleCount: 900,
+		spread: 500,
+		origin: { y: 0.4 }
+	  });
+};
+  </script>
 </body>
 </html>
